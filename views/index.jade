@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    h1 #{title} #{date}
+    p Welcome to #{title}
+    a(href='/addServer') Add Server
+    table#serverList
+        thead
+            tr
+                td ID
+                td Name
+                td Backups
+            tr
+                tbody
+

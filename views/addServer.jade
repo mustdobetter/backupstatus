@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    h1= title
+    p Add new backup server below
+    form(id='addServer', method='post', action='/addServer/post')
+        ul
+            li
+                label(for='name') Name
+                input(id='name', name='name')
+            li(class='control')
+                input(id='database', name='database', type='checkbox', checked=true & 'checked')
+                label(for='database') Database
+            li(class='control')
+                input(id='files', name='files', type='checkbox', checked=true & 'checked')
+                label(for='files') Files
+            li
+                input(id='submit', name='submit', type='submit', value='Add Server')
+
+
